@@ -181,9 +181,9 @@ main{
     .container{
       text-align: center;
       color: #fff;
-      padding: 400px 0;
+      padding: 300px 0;
       @include responsive(md){
-        padding: 200px 0;
+        padding: 300px 0;
       }
       .subhead{
          font-size: 50px;
@@ -223,9 +223,12 @@ main{
   }
   //contact
   .contact{
-    margin-top: 100px;
+    margin-top: 150px;
     position: relative;
     z-index: 5;
+    @include responsive(md){
+      margin-top: 200px;
+    }
     .container{
     text-align: center;
     .head{

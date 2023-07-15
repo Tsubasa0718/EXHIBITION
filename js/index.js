@@ -66,29 +66,18 @@ window.addEventListener('scroll', function(){
 
 
 //scroll backgroundimage
-
-//画面下から#accessまでの距離
-const AccessElement = document.getElementById('access');
-const AccessPosition = AccessElement.getBoundingClientRect().top + window.scrollY - window.innerHeight;
-//画面下から#contactまでの距離
-const ContactElement = document.getElementById('contact');
-const ContactPosition = ContactElement.getBoundingClientRect().top + window.scrollY - window.innerHeight;
-
 //背景画像の要素取得
-const BackgroundImage = document.querySelector('.bg');
-
+const BackgroundImage = document.getElementById('bg');
 window.addEventListener('scroll', function(){
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
- if(scrollTop > AccessPosition){
-  if(scrollTop < ContactPosition){
+  //画面上部
+  const TrigerTop = 3550;
+ //画面下部
+  const TrigerBottom = 4200;
+  if(window.scrollY >= TrigerTop && window.scrollY <= TrigerBottom){
     feadeIn(BackgroundImage);
   }else{
     feadeOut(BackgroundImage);
   }
- }else{
-  feadeOut(BackgroundImage);
-}
-
 })
 
 //feadeIn 関数
