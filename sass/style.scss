@@ -1,0 +1,23 @@
+@use "./leyout/_header.scss";
+@use "./leyout/_main.scss";
+@use "./leyout/_footer.scss";
+@use "./resest/_reset.scss";
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+:target{
+  scroll-margin: 60px;
+}
+
+body{
+  background-color: black;
+  color: #fff;
+}
+
+a{
+  text-decoration: none;
+}
