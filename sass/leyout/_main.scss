@@ -87,7 +87,7 @@ main{
       //sidebutton
       .side_button{
         position: fixed;
-        top: 70%;
+        top: 65%;
         right: -170px;
         transform: translateX(50px) rotate(-90deg);
         transition: .5s;
@@ -96,6 +96,7 @@ main{
           padding: 10px 40px;
           color: #fff;
           border: 1px solid #fff;
+          margin: 0;
         }
       }
       .side_button.slide{
@@ -183,7 +184,7 @@ main{
       color: #fff;
       padding: 300px 0;
       @include responsive(md){
-        padding: 300px 0;
+        padding: 200px 0;
       }
       .subhead{
          font-size: 50px;
@@ -226,10 +227,7 @@ main{
     margin-top: 150px;
     position: relative;
     z-index: 5;
-    @include responsive(md){
-      margin-top: 200px;
-    }
-    .container{
+     .container{
     text-align: center;
     .head{
       font-size: 50px;

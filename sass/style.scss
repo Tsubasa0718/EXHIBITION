@@ -2,7 +2,7 @@
 @use "./leyout/_main.scss";
 @use "./leyout/_footer.scss";
 @use "./resest/_reset.scss";
-
+@use "./responsive/responsive" as *;
 *, *::before, *::after{
   box-sizing: border-box;
 }
@@ -20,4 +20,11 @@ body{
 
 a{
   text-decoration: none;
+}
+
+.pc_only {
+  display: block;
+  @include responsive(md){
+   display: none;
+  }
 }

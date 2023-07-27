@@ -66,19 +66,35 @@ window.addEventListener('scroll', function(){
 
 
 //scroll backgroundimage
+//pc 3800 ~ 4500
+//sp 3000 ~ 3800
 //背景画像の要素取得
-const BackgroundImage = document.getElementById('bg');
 window.addEventListener('scroll', function(){
-  //画面上部
-  const TrigerTop = 3550;
- //画面下部
-  const TrigerBottom = 4200;
-  if(window.scrollY >= TrigerTop && window.scrollY <= TrigerBottom){
-    feadeIn(BackgroundImage);
+  const scrollPosition = window.scrollY;
+  const screenWidth = window.innerWidth;
+ 
+  if(screenWidth <= 900){
+  const minScrollPosition = 3000;
+  const maxScrollPosition = 3600;
+  handleAnimation(scrollPosition, minScrollPosition, maxScrollPosition)
+ }else{
+  const minScrollPosition = 3800;
+  const maxScrollPosition = 4500;
+  handleAnimation(scrollPosition, minScrollPosition, maxScrollPosition)
+ }
+});
+
+const BackgroundElement = document.getElementById('bg');
+
+function handleAnimation(scrollPosition, minScrollPosition, maxScrollPosition){
+  if (scrollPosition >= minScrollPosition && scrollPosition <= maxScrollPosition){
+   feadeIn(BackgroundElement);
   }else{
-    feadeOut(BackgroundImage);
+    feadeOut(BackgroundElement);
   }
-})
+}
+
+//Spscrollanimation
 
 //feadeIn 関数
 function feadeIn(element){

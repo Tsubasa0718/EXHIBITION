@@ -165,7 +165,7 @@ main .mainvisual .container .day_wrapper.show-image {
 }
 main .mainvisual .container .side_button {
   position: fixed;
-  top: 70%;
+  top: 65%;
   right: -170px;
   transform: translateX(50px) rotate(-90deg);
   transition: 0.5s;
@@ -175,6 +175,7 @@ main .mainvisual .container .side_button a {
   padding: 10px 40px;
   color: #fff;
   border: 1px solid #fff;
+  margin: 0;
 }
 main .mainvisual .container .side_button.slide {
   transform: translateX(0) rotate(-90deg);
@@ -269,7 +270,7 @@ main .mainvisual_2 .container {
 }
 @media screen and (max-width: 900px) {
   main .mainvisual_2 .container {
-    padding: 300px 0;
+    padding: 200px 0;
   }
 }
 main .mainvisual_2 .container .subhead {
@@ -310,11 +311,6 @@ main .contact {
   margin-top: 150px;
   position: relative;
   z-index: 5;
-}
-@media screen and (max-width: 900px) {
-  main .contact {
-    margin-top: 200px;
-  }
 }
 main .contact .container {
   text-align: center;
@@ -532,6 +528,15 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.pc_only {
+  display: block;
+}
+@media screen and (max-width: 900px) {
+  .pc_only {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
